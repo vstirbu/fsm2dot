@@ -1,0 +1,27 @@
+{
+  "name": "fsm2dot",
+  "version": "0.1.0",
+  "description": "Convert javascript state machine to DOT",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vstirbu/fsm2dot.git"
+  },
+  "author": "Vlad Stirbu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vstirbu/fsm2dot/issues"
+  },
+  "homepage": "https://github.com/vstirbu/fsm2dot",
+  "dependencies": {
+    "esprima": "~1.0.4",
+    "escodegen": "~1.2.0",
+    "estraverse": "~1.5.0",
+    "jade": "~1.2.0",
+    "yargs": "~1.1.3"
+  },
+  "preferGlobal": "true",
+  "bin": {
+    "fsm2dot": "index.js"
+  }
+}

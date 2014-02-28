@@ -1,0 +1,26 @@
+- var first = "\n"
+|digraph G {
+|   node [fontname = "Geneva"]
+|   edge [fontname = "Geneva"]
+|   splines=polyline
+if initial
+  |   #{initial} [shape="circle", style="filled", fillcolor=black, label="", width=0.25]#{first}
+if final
+  |   #{final} [shape="doublecircle", style="filled", fillcolor=black, label="", width=0.25]#{first}
+each state in states
+  |   #{state.name} [shape="none", label=<
+  table(style="rounded")
+    tr
+      td(border="0") #{state.name}
+    if state.activities.length != 0
+      hr
+      tr
+        td(border="0")
+      hr
+      each a in state.activities
+        tr
+          td(border="0", align="left") #{a}
+  |>]#{first}
+each event in events
+  |   #{event.from} -> #{event.to} [label="#{event.label}"]#{first}
+|}

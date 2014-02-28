@@ -1,0 +1,13 @@
+- var first = "\n"
+|digraph G {
+|   splines=polyline
+if initial
+  |   #{initial} [shape="circle", style="filled", fillcolor=black, label=""]#{first}
+if final
+  |   #{final} [shape="doublecircle", style="filled", fillcolor=black, label=""]#{first}
+each state in states
+  - var activities = state.activities ? state.activities.join('\n') : ''
+  |   #{state.name} [shape="record", style="rounded", label="{#{state.name} | | #{activities}}"]#{first}
+each event in events
+  |   #{event.from} -> #{event.to} [label="#{event.label}"]#{first}
+|}
