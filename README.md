@@ -4,6 +4,31 @@ Inspects a file containing a finite state machine defined using the [javascript-
 
 ## Features
 
+The following finite state machine:
+
+```javascript
+var fsm = StateMachine.create({
+  initial: 'start',
+  final: 'stop',
+  events: [
+    { name: 'init', from: 'start', to: 'Ready' },
+    { name: 'proceed', from: 'Ready', to: 'Steady' },
+    { name: 'end', from: 'Steady', to: 'stop' }
+  ],
+  callbacks: {
+    onReady: function () {},
+    onleaveReady: function LeaveReady() {},
+    onSteady: onS
+  }
+});
+  
+function onS() {}
+```
+
+will be converted to a DOT graph that can be visialized like this:
+
+![Image](example/fsm.png)
+
 ## Command Line
 
 Install [node](http://nodejs.org/), then:

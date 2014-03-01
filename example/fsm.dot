@@ -1,0 +1,11 @@
+digraph G {
+  node [fontname = "Geneva"]
+  edge [fontname = "Geneva"]
+  splines=polyline  start [shape="circle", style="filled", fillcolor=black, label="", width=0.25]
+  stop [shape="doublecircle", style="filled", fillcolor=black, label="", width=0.25]
+  Ready [shape="none", label=<<table style="rounded"><tr><td border="0">Ready</td></tr><hr/><tr><td border="0"></td></tr><hr/><tr><td border="0" align="left">entry/onReady</td></tr><tr><td border="0" align="left">exit/LeaveReady</td></tr></table>>]
+  Steady [shape="none", label=<<table style="rounded"><tr><td border="0">Steady</td></tr><hr/><tr><td border="0"></td></tr><hr/><tr><td border="0" align="left">entry/onS</td></tr></table>>]
+  start -> Ready [label="init"]
+  Ready -> Steady [label="proceed"]
+  Steady -> stop [label="end"]
+}
