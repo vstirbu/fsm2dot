@@ -13,12 +13,15 @@ var fsm = StateMachine.create({
   events: [
     { name: 'init', from: 'start', to: 'Ready' },
     { name: 'proceed', from: 'Ready', to: 'Steady' },
-    { name: 'end', from: 'Steady', to: 'stop' }
+    { name: 'end', from: 'Steady', to: 'stop' },
+    
+    { name: 'test', from: 'Ready', to: 'Ready' }
   ],
   callbacks: {
     onReady: function () {},
     onleaveReady: function LeaveReady() {},
-    onSteady: onS
+    onSteady: onS,
+    ontest: function Activity() {}
   }
 });
   
@@ -41,6 +44,13 @@ and run:
 
 ```bash
 $ fsm2dot --help
+```
+
+## Test
+
+```bash
+$ npm install -g mocha
+npm test
 ```
 
 ## License
