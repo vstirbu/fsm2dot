@@ -23,5 +23,8 @@
   "preferGlobal": "true",
   "bin": {
     "fsm2dot": "index.js"
+  },
+  "scripts": {
+    "test": "mocha"
   }
 }

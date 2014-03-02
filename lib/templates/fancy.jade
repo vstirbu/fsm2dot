@@ -2,7 +2,7 @@
 |digraph G {
 |   node [fontname = "Geneva"]
 |   edge [fontname = "Geneva"]
-|   splines=polyline
+|   splines=polyline#{first}
 if initial
   |   #{initial} [shape="circle", style="filled", fillcolor=black, label="", width=0.25]#{first}
 if final
@@ -17,10 +17,16 @@ each state in states
       tr
         td(border="0")
       hr
-      each a in state.activities
+      each a in state.activities.entry
         tr
-          td(border="0", align="left") #{a}
+          td(border="0", align="left") entry/#{a}
+      each a in state.activities.do
+        tr
+          td(border="0", align="left") do/#{a}
+      each a in state.activities.exit
+        tr
+          td(border="0", align="left") exit/#{a}
   |>]#{first}
 each event in events
-  |   #{event.from} -> #{event.to} [label="#{event.label}"]#{first}
+  |   #{event.from} -> #{event.to} [label=" #{event.label}"]#{first}
 |}
