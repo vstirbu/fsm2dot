@@ -1,0 +1,3 @@
+StateMachine.create({
+  initial: 'start'
+});

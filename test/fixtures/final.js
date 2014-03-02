@@ -1,0 +1,3 @@
+StateMachine.create({
+  final: 'stop'
+});
