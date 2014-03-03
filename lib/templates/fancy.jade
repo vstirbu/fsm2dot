@@ -12,7 +12,7 @@ each state in states
   table(style="rounded")
     tr
       td(border="0") #{state.name}
-    if state.activities.length != 0
+    if state.activities.entry.length || state.activities.do.length || state.activities.exit.length
       hr
       tr
         td(border="0")

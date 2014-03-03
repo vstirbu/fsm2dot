@@ -31,6 +31,10 @@ describe('states', function () {
   it('should identify the do activity', function() {
     test('do');
   });
+  
+  it('should handle state without activities', function() {
+    test('simple-state');
+  });
 });
 
 describe('activity handlers', function () {
