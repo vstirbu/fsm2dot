@@ -1,6 +1,6 @@
 # fsm2dot
 
-Inspects a file containing a finite state machine defined using the [javascript-state-machine](https://github.com/jakesgordon/javascript-state-machine) library and outputs the correspondent [DOT](http://www.graphviz.org/doc/info/lang.html) graph representation.
+Inspects a file containing a finite state machine defined using the [javascript-state-machine](https://github.com/jakesgordon/javascript-state-machine) library and outputs the correspondent UML diagram using [DOT](http://www.graphviz.org/doc/info/lang.html) graph representation.
 
 ## Features
 
