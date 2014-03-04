@@ -50,7 +50,7 @@ $ fsm2dot --help
 
 ```bash
 $ npm install -g mocha
-npm test
+$ npm test
 ```
 
 ## License
