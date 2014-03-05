@@ -30,7 +30,7 @@ function onS() {}
 
 will be converted to a DOT graph that can be visialized like this:
 
-![Image](example/fsm.png)
+![Image](https://raw.github.com/vstirbu/fsm2dot/master/example/fsm.png)
 
 ## Command Line
 
