@@ -2,7 +2,7 @@
 
 Inspects a file containing a finite state machine defined using the [javascript-state-machine](https://github.com/jakesgordon/javascript-state-machine) library and outputs the correspondent UML diagram using [DOT](http://www.graphviz.org/doc/info/lang.html) graph representation.
 
-[![Build Status](https://travis-ci.org/vstirbu/fsm2dot.png?branch=master)](https://travis-ci.org/vstirbu/fsm2dot)
+[![NPM version](https://badge.fury.io/js/fsm2dot.png)](http://badge.fury.io/js/fsm2dot) [![Build Status](https://travis-ci.org/vstirbu/fsm2dot.png?branch=master)](https://travis-ci.org/vstirbu/fsm2dot)
 
 ## Features
 
