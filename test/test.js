@@ -6,7 +6,9 @@ var assert = require('assert'),
 
 function test(testcase) {
   var input = 'test/fixtures/' + testcase + '.js',
-      expected = fs.readFileSync('test/expected/' + testcase + '.dot');
+      expected = fs.readFileSync('test/expected/' + testcase + '.dot', {
+        encoding: 'utf8'
+      });
   
   return assert.equal(graph(input, 'fancy'), expected);
 }
@@ -35,6 +37,10 @@ describe('states', function () {
   it('should handle state without activities', function() {
     test('simple-state');
   });
+  
+  it('should handle event with multiple from values', function () {
+    test('from-array');
+  })
 });
 
 describe('activity handlers', function () {

@@ -2,6 +2,5 @@ digraph G {
   node [fontname = "Geneva"]
   edge [fontname = "Geneva"]
   splines=polyline
-  none [shape="circle", style="filled", fillcolor=black, label="", width=0.25]
-  stop [shape="doublecircle", style="filled", fillcolor=black, label="", width=0.25]
+  stop [shape="doublecircle", style="filled", fillcolor=black, label="",xlabel="stop", fixedsize="true", width=0.25]
 }

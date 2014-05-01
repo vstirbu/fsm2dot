@@ -2,7 +2,7 @@ digraph G {
   node [fontname = "Geneva"]
   edge [fontname = "Geneva"]
   splines=polyline
-  none [shape="circle", style="filled", fillcolor=black, label="", width=0.25]
+  none [shape="circle", style="filled", fillcolor=black, label="", xlabel="none", fixedsize="true", width=0.25]
   ready [shape="none", label=<<table style="rounded"><tr><td border="0">ready</td></tr><hr/><tr><td border="0"></td></tr><hr/><tr><td border="0" align="left">entry/readyHandler</td></tr></table>>]
-  none -> ready [label=" startup"]
+  none -> ready [label=" startup "]
 }

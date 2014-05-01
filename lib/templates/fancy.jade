@@ -4,9 +4,9 @@
 |   edge [fontname = "Geneva"]
 |   splines=polyline#{first}
 if initial
-  |   #{initial} [shape="circle", style="filled", fillcolor=black, label="", width=0.25]#{first}
+  |   #{initial} [shape="circle", style="filled", fillcolor=black, label="", xlabel="#{initial}", fixedsize="true", width=0.25]#{first}
 if final
-  |   #{final} [shape="doublecircle", style="filled", fillcolor=black, label="", width=0.25]#{first}
+  |   #{final} [shape="doublecircle", style="filled", fillcolor=black, label="",xlabel="#{final}", fixedsize="true", width=0.25]#{first}
 each state in states
   |   #{state.name} [shape="none", label=<
   table(style="rounded")
@@ -28,5 +28,5 @@ each state in states
           td(border="0", align="left") exit/#{a}
   |>]#{first}
 each event in events
-  |   #{event.from} -> #{event.to} [label=" #{event.label}"]#{first}
+  |   #{event.from} -> #{event.to} [label=" #{event.label} "]#{first}
 |}
