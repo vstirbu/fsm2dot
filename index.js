@@ -3,7 +3,6 @@
 var fs = require('fs'),
   argv = require('yargs')
   .usage('Creates a DOT graph visualization of the state machine.\nUsage: fsm2dot -f filename -s [strict|fancy]')
-//  .example('$0 -f', 'count the lines in the given file')
   .options('f', {
     alias: 'file',
     describe: 'Source file with a finite state machine'

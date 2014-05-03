@@ -1,0 +1,6 @@
+digraph G {
+  node [fontname = "Geneva"]
+  edge [fontname = "Geneva"]
+  splines=polyline
+  one [shape="none", label=<<table style="rounded"><tr><td border="0">one</td></tr><hr/><tr><td border="0"></td></tr><hr/><tr><td border="0" align="left">do/ev</td></tr></table>>]
+}

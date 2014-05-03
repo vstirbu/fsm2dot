@@ -40,19 +40,27 @@ describe('states', function () {
   
   it('should handle event with multiple from values', function () {
     test('from-array');
-  })
+  });
+  
+  it('should handle event without to state', function () {
+    test('event-without-to');
+  });
 });
 
 describe('activity handlers', function () {
-  it('should identify handler name when anonymous function', function() {
+  it('should identify handler name when anonymous function', function () {
     test('anonymous');
   });
   
-  it('should identify handler name when function has name', function() {
+  it('should identify handler name when function has name', function () {
     test('name');
   });
   
-  it('should identify reference name', function() {
+  it('should identify reference name', function () {
     test('reference');
+  });
+  
+  it('should identify activities that do not have callbacks', function () {
+    test('event-without-callbacks');
   });
 });
