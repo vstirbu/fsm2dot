@@ -18,9 +18,19 @@ var fs = require('fs'),
     describe: 'Output filename'
   })
   .demand('f')
-  .argv;
+  .argv,
+  graph;
 
-var graph = require('./lib/graph.js')(argv.file, argv.style);
+try {
+  graph = require('./lib/graph.js')(argv.file, argv.style);
+} catch (e) {
+  if (e.message === 'NoFSM') {
+    console.log('Input file contains no FSM');
+  } else {
+    console.log('Unknown error\nPlease open an issue at: https://github.com/vstirbu/fsm2dot/issues');
+  }
+  return;
+}
 
 if (argv.output === undefined) {
   console.log(graph);
