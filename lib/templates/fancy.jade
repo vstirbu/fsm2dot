@@ -20,6 +20,9 @@ each state in states
       each a in state.activities.entry
         tr
           td(border="0", align="left") entry/#{a}
+      each a in state.activities.entered
+        tr
+          td(border="0", align="left") entry/#{a}
       each a in state.activities.do
         tr
           td(border="0", align="left") do/#{a}
