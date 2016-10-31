@@ -1,5 +1,7 @@
 #!/usr/bin/env node
 
+var parser = require('./lib/graph.js');
+
 var fs = require('fs'),
   argv = require('yargs')
   .usage('Creates a DOT graph visualization of the state machine.\nUsage: fsm2dot -f filename -s [strict|fancy]')
@@ -21,12 +23,13 @@ var fs = require('fs'),
   graph;
 
 try {
-  graph = require('./lib/graph.js')(argv.file, argv.style);
+  graph = parser(argv.file, argv.style);
 } catch (e) {
   if (e.message === 'NoFSM') {
     console.log('Input file contains no FSM');
   } else {
-    console.log('Unknown error\nPlease open an issue at: https://github.com/vstirbu/fsm2dot/issues');
+    console.log(e);
+    console.log('Please open an issue at: https://github.com/vstirbu/fsm2dot/issues');
   }
   return;
 }

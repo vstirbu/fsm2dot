@@ -3,8 +3,8 @@ digraph G {
   edge [fontname = "Geneva"]
   splines=polyline
   one [shape="none", label=<<table style="rounded"><tr><td border="0">one</td></tr></table>>]
-  three [shape="none", label=<<table style="rounded"><tr><td border="0">three</td></tr></table>>]
   two [shape="none", label=<<table style="rounded"><tr><td border="0">two</td></tr></table>>]
+  three [shape="none", label=<<table style="rounded"><tr><td border="0">three</td></tr></table>>]
   one -> three [label=" multiple "]
   two -> three [label=" multiple "]
 }
