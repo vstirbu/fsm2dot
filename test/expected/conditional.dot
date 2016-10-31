@@ -1,0 +1,12 @@
+digraph G {
+  node [fontname = "Geneva"]
+  edge [fontname = "Geneva"]
+  splines=polyline
+  none [shape="circle", style="filled", fillcolor=black, label="", xlabel="none", fixedsize="true", width=0.25]
+  one [shape="none", label=<<table style="rounded"><tr><td border="0">one</td></tr></table>>]
+  two [shape="none", label=<<table style="rounded"><tr><td border="0">two</td></tr></table>>]
+  none__multiple [shape="diamond", label="", width=0.25, height=0.25]
+  none -> none__multiple [label=" multiple "]
+  none__multiple -> one [label="  "]
+  none__multiple -> two [label="  "]
+}

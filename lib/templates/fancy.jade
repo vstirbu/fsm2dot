@@ -5,8 +5,8 @@
 |   splines=polyline#{first}
 if initial
   |   #{initial} [shape="circle", style="filled", fillcolor=black, label="", xlabel="#{initial}", fixedsize="true", width=0.25]#{first}
-if final
-  |   #{final} [shape="doublecircle", style="filled", fillcolor=black, label="",xlabel="#{final}", fixedsize="true", width=0.25]#{first}
+each f in final
+  |   #{f} [shape="doublecircle", style="filled", fillcolor=black, label="",xlabel="#{f}", fixedsize="true", width=0.25]#{first}
 each state in states
   |   #{state.name} [shape="none", label=<
   table(style="rounded")
@@ -30,6 +30,8 @@ each state in states
         tr
           td(border="0", align="left") exit/#{a}
   |>]#{first}
+each state in choices
+  |   #{state} [shape="diamond", label="", width=0.25, height=0.25]#{first}
 each event in events
   |   #{event.from} -> #{event.to} [label=" #{event.label} "]#{first}
 |}

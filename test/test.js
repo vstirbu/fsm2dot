@@ -45,6 +45,10 @@ describe('states', function () {
   it('should handle event without to state', function () {
     test('event-without-to');
   });
+
+  it('should handle conditional transition', function () {
+    test('conditional');
+  });
 });
 
 describe('activity handlers', function () {
