@@ -1,10 +1,14 @@
 #!/usr/bin/env node
 
+var fs = require('fs');
+var path = require('path');
+
+var yargs = require('yargs');
+
 var parser = require('./lib/graph.js');
 
-var fs = require('fs'),
-  argv = require('yargs')
-  .usage('Creates a DOT graph visualization of the state machine.\nUsage: fsm2dot -f filename -s [strict|fancy]')
+var graph;
+var argv = yargs.usage('Creates a DOT graph visualization of the state machine.\nUsage: fsm2dot -f filename -s [strict|fancy]')
   .options('f', {
     alias: 'file',
     describe: 'Source file with a finite state machine'
@@ -19,11 +23,13 @@ var fs = require('fs'),
     describe: 'Output filename'
   })
   .demand('f')
-  .argv,
-  graph;
+  .argv;
+
+var file = path.join(process.cwd(), argv.file);
+var content = fs.readFileSync(file, 'utf8');
 
 try {
-  graph = parser(argv.file, argv.style);
+  graph = parser(content, argv.style);
 } catch (e) {
   if (e.message === 'NoFSM') {
     console.log('Input file contains no FSM');

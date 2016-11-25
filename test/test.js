@@ -5,10 +5,8 @@ var assert = require('assert'),
     graph = require('../lib/graph.js');
 
 function test(testcase) {
-  var input = 'test/fixtures/' + testcase + '.js',
-      expected = fs.readFileSync('test/expected/' + testcase + '.dot', {
-        encoding: 'utf8'
-      });
+  var input = fs.readFileSync('test/fixtures/' + testcase + '.js', { encoding: 'utf8' }),
+      expected = fs.readFileSync('test/expected/' + testcase + '.dot', { encoding: 'utf8' });
   
   return assert.equal(graph(input, 'fancy'), expected);
 }
