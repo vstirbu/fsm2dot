@@ -1,0 +1,13 @@
+- var LFCR = "\n"
+|graph TB#{LFCR}
+if initial
+  |  #{initial}(( ))#{LFCR}
+each f in final
+  |  #{f}(( ))#{LFCR}
+each state in states
+  |  #{state.name}(#{state.name})#{LFCR}
+each choice in choices
+  |  #{choice}{ }#{LFCR}
+each event in events
+  - var label = event.label ? `-- ${event.label} ` : '';
+  |  #{event.from}#{label}-->#{event.to}#{LFCR}
