@@ -1,0 +1,20 @@
+- var LFCR = "\n"
+if initial
+  |[<start>#{initial}]#{LFCR}
+each f in final
+  |[<end>#{f}]#{LFCR}
+each state in states
+  |[<state>#{state.name}||#{LFCR}
+  each item in state.activities.entry
+    |  entry/#{item}#{LFCR}
+  each item in state.activities.entered
+    |  entry/#{item}#{LFCR}
+  each item in state.activities.do
+    |  do/#{item}#{LFCR}
+  each item in state.activities.exit
+    |  exit/#{item}#{LFCR}
+  |]#{LFCR}
+each choice in choices
+  |[<choice>#{choice}]#{LFCR}
+each event in events
+  |[#{event.from}]#{event.label}->[#{event.to}]#{LFCR}
