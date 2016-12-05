@@ -1,11 +1,22 @@
-- var LFCR = "\n"
+- const LFCR = "\n"
 |graph TB#{LFCR}
 if initial
-  |  #{initial}(( ))#{LFCR}
+  |  #{initial}(( ))
+  |  click #{initial} "fsm://" "#{initial}"
+  |  style #{initial} fill:#000,stroke:#000#{LFCR}
 each f in final
   |  #{f}(( ))#{LFCR}
 each state in states
-  |  #{state.name}(#{state.name})#{LFCR}
+  |  #{state.name}(<table><tr><th>#{state.name}</th></tr>
+  each item in state.activities.entry
+    |  <tr><td>entry/#{item}</td></tr>
+  each item in state.activities.entered
+    |  <tr><td>entry/#{item}</td></tr>
+  each item in state.activities.do
+    |  <tr><td>do/#{item}</td></tr>
+  each item in state.activities.exit
+    |  <tr><td>exit/#{item}</td></tr>
+  |  </table>)#{LFCR}
 each choice in choices
   |  #{choice}{ }#{LFCR}
 each event in events
