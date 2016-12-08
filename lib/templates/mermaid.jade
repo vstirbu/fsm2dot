@@ -5,20 +5,31 @@ if initial
   |  click #{initial} "fsm://" "#{initial}"
   |  style #{initial} fill:#000,stroke:#000#{LFCR}
 each f in final
-  |  #{f}(( ))#{LFCR}
+  |  #{f}(( ))
+  |  click #{f} "fsm://" "#{f}"#{LFCR}
+  |  style #{f} fill:#fff,stroke:#000#{LFCR}
 each state in states
-  |  #{state.name}(<table><tr><th>#{state.name}</th></tr>
-  each item in state.activities.entry
-    |  <tr><td>entry/#{item}</td></tr>
-  each item in state.activities.entered
-    |  <tr><td>entry/#{item}</td></tr>
-  each item in state.activities.do
-    |  <tr><td>do/#{item}</td></tr>
-  each item in state.activities.exit
-    |  <tr><td>exit/#{item}</td></tr>
-  |  </table>)#{LFCR}
+  |  #{state.name}(
+  table
+    tr
+      th #{state.name}
+    each item in state.activities.entry
+      tr
+        td entry/#{item}
+    each item in state.activities.entered
+      tr
+        td entry/#{item}
+    each item in state.activities.do
+      tr
+        td do/#{item}
+    each item in state.activities.exit
+      tr
+        td exit/#{item}
+  |  )
+  |  style #{state.name} fill:#fff,stroke:#000#{LFCR}
 each choice in choices
-  |  #{choice}{ }#{LFCR}
+  |  #{choice}{ }
+  |  style #{choice} fill:#fff,stroke:#000#{LFCR}
 each event in events
   - var label = event.label ? `-- ${event.label} ` : '';
   |  #{event.from}#{label}-->#{event.to}#{LFCR}

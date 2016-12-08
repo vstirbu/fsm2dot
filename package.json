@@ -2,7 +2,7 @@
   "name": "fsm2dot",
   "version": "1.0.0",
   "description": "Convert javascript state machine to DOT",
-  "main": "index.js",
+  "main": "lib/graph.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/vstirbu/fsm2dot.git"
@@ -18,6 +18,7 @@
     "escodegen": "^1.8.1",
     "esprima": "^3.1.0",
     "estraverse": "^4.1.1",
+    "lodash": "^4.17.2",
     "pug": "^2.0.0-beta6",
     "yargs": "^6.3.0"
   },
