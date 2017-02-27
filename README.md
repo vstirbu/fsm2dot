@@ -12,6 +12,13 @@ Inspects a file containing a finite state machine defined using [fsm-as-promised
 The following finite state machine:
 
 ```javascript
+/*
+ * the file must contain
+ * var StateMachine = require('fsm-as-promised');
+ * or
+ * var StateMachine = require('javascript-state-machine');
+ */
+
 var fsm = StateMachine.create({
   initial: 'start',
   final: 'stop',
