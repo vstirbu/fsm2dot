@@ -1,3 +1,10 @@
+/*
+ * the file must contain
+ * var StateMachine = require('fsm-as-promised');
+ * or
+ * var StateMachine = require('javascript-state-machine');
+ */
+
 var fsm = StateMachine.create({
   initial: 'start',
   final: 'stop',
