@@ -6,9 +6,9 @@ var assert = require('assert'),
 
 function test(testcase) {
   var input = fs.readFileSync('test/fixtures/' + testcase + '.js', { encoding: 'utf8' }),
-      expected = fs.readFileSync('test/expected/' + testcase + '.dot', { encoding: 'utf8' });
+      expected = fs.readFileSync('test/expected/json/' + testcase + '.json', { encoding: 'utf8' });
   
-  return assert.equal(graph(input, 'fancy'), expected);
+  return assert.equal(JSON.stringify(graph(input)), expected);
 }
 
 describe('states', function () {

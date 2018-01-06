@@ -1,0 +1,1 @@
+{"events":[{"name":"startup","from":"none","to":"ready","label":"startup"}],"callbacks":{"onready":"onready"},"choices":[],"states":[{"name":"ready","activities":{"do":[],"entry":["onready"],"entered":[],"exit":[]}}],"final":[],"initial":"none"}
