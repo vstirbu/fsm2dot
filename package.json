@@ -1,6 +1,6 @@
 {
   "name": "fsm2dot",
-  "version": "1.0.0",
+  "version": "1.2.0",
   "description": "Convert javascript state machine to DOT",
   "main": "lib/graph.js",
   "repository": {
@@ -19,15 +19,15 @@
     "esprima": "^3.1.0",
     "estraverse": "^4.1.1",
     "lodash": "^4.17.2",
-    "pug": "^2.0.0-beta6",
-    "yargs": "^6.3.0"
+    "pug": "^2.0.0-rc.4",
+    "yargs": "^9.0.1"
   },
   "preferGlobal": true,
   "bin": {
     "fsm2dot": "index.js"
   },
   "scripts": {
-    "test": "mocha",
+    "test": "mocha test/test.js",
     "test-cov": "istanbul cover _mocha -- -R spec --check-leaks",
     "test-travis": "istanbul cover _mocha --report lcovonly -- --reporter dot"
   }

@@ -1,3 +1,7 @@
+# 1.2.0 / 2018-01-06
+
+* moved pug rendering from lib to cli
+
 # 1.1.0 / 2016-11-25
 
 * transitioned from jade to pug
