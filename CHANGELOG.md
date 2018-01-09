@@ -1,3 +1,7 @@
+# 1.3.0 / 2018-01-09
+
+* added arrow functions support
+
 # 1.2.0 / 2018-01-06
 
 * moved pug rendering from lib to cli
