@@ -1,3 +1,8 @@
+# HEAD
+
+* detect custom callback prefix
+* return callback functions location in the source file
+
 # 1.3.0 / 2018-01-09
 
 * added arrow functions support

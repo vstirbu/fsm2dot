@@ -1,6 +1,6 @@
 var StateMachine = require('fsm-as-promised');
 
-StateMachine.create({
+StateMachine({
   events: [
     { name: 'startup', from: 'none', to: 'ready' }
   ],

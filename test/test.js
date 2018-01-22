@@ -8,7 +8,6 @@ function test(testcase) {
   const input = fs.readFileSync('test/fixtures/' + testcase + '.js', { encoding: 'utf8' });
   // console.log(JSON.stringify(graph(input)));
   const expected = fs.readFileSync('test/expected/json/' + testcase + '.json', { encoding: 'utf8' });
-
   return assert.equal(JSON.stringify(graph(input)), expected);
 }
 
@@ -71,5 +70,11 @@ describe('activity handlers', function () {
 describe('es6', function() {
   it('with arrow functions', function () {
     test('arrow-functions');
+  });
+});
+
+describe('customization', function() {
+  it('with custom callback prefix', function () {
+    test('callback-prefix');
   });
 });
