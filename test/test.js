@@ -8,7 +8,7 @@ function test(testcase) {
   const input = fs.readFileSync('test/fixtures/' + testcase + '.js', { encoding: 'utf8' });
   // console.log(JSON.stringify(graph(input)));
   const expected = fs.readFileSync('test/expected/json/' + testcase + '.json', { encoding: 'utf8' });
-  return assert.equal(JSON.stringify(graph(input)), expected);
+  return assert.equal(JSON.stringify(graph(input).fsm), expected);
 }
 
 describe('states', function () {
