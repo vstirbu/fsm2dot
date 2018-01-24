@@ -1,6 +1,6 @@
 {
   "name": "fsm2dot",
-  "version": "1.3.0",
+  "version": "2.0.0",
   "description": "Convert javascript state machine to DOT",
   "main": "lib/graph.js",
   "repository": {

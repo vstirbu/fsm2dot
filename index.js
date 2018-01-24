@@ -32,7 +32,7 @@ const content = fs.readFileSync(file, 'utf8');
 const template = fs.readFileSync(__dirname + '/lib/templates/' + argv.style + '.jade', 'utf8');
 
 try {
-  graph = pug.compile(template)(parser(content));
+  graph = pug.compile(template)(parser(content).fsm);
 } catch (e) {
   if (e.message === 'NoFSM') {
     console.log('Input file contains no FSM');

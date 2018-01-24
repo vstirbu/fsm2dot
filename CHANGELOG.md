@@ -1,7 +1,9 @@
 # HEAD
 
+# 2.0.0 / 2018-01-24
+
 * detect custom callback prefix
-* return callback functions location in the source file
+* return meta property with callback functions location in the source file
 
 # 1.3.0 / 2018-01-09
 
