@@ -1,5 +1,9 @@
 # HEAD
 
+# 2.0.1 / 2018-01-30
+
+* parse state machines having activity with same name in two states.
+
 # 2.0.0 / 2018-01-24
 
 * detect custom callback prefix

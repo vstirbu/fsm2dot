@@ -65,6 +65,10 @@ describe('activity handlers', function () {
   it('should identify activities that do not have callbacks', function () {
     test('event-without-callbacks');
   });
+
+  it('should identify activities with same name in two states', function () {
+    test('activity-in-two-states');
+  });
 });
 
 describe('es6', function() {
