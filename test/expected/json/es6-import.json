@@ -1,0 +1,1 @@
+{"events":[{"name":"startup","from":"none","to":"ready","label":"startup"}],"choices":[],"states":[{"name":"ready","activities":{"do":[],"entry":[],"entered":[],"exit":[]}}],"final":[],"initial":"none"}
