@@ -5,7 +5,7 @@ Inspects a file containing a finite state machine defined using [fsm-as-promised
 [![NPM Version](https://img.shields.io/npm/v/fsm2dot.svg)](https://www.npmjs.com/package/fsm2dot)
 [![NPM License](https://img.shields.io/npm/l/fsm2dot.svg)](https://www.npmjs.com/package/fsm2dot)
 [![Build Status](https://travis-ci.org/vstirbu/fsm2dot.png?branch=master)](https://travis-ci.org/vstirbu/fsm2dot)
-[![Coverage Status](https://coveralls.io/repos/github/vstirbu/fsm2dot/badge.svg?branch=feature%2Fcoverage)](https://coveralls.io/github/vstirbu/fsm2dot?branch=feature%2Fcoverage)
+[![Coverage Status](https://coveralls.io/repos/github/vstirbu/fsm2dot/badge.svg?branch=feature%2Fcoverage)](https://coveralls.io/github/vstirbu/fsm2dot?branch=master)
 
 ## Features
 
@@ -26,7 +26,7 @@ var fsm = StateMachine.create({
     { name: 'init', from: 'start', to: 'Ready' },
     { name: 'proceed', from: 'Ready', to: 'Steady' },
     { name: 'end', from: 'Steady', to: 'stop' },
-    
+
     { name: 'test', from: 'Ready', to: 'Ready' }
   ],
   callbacks: {
@@ -36,7 +36,7 @@ var fsm = StateMachine.create({
     ontest: function Activity() {}
   }
 });
-  
+
 function onS() {}
 ```
 
