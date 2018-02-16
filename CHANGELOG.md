@@ -1,5 +1,9 @@
 # HEAD
 
+* support import statement
+* support dynamic initial state
+* support JSX elements in file
+
 # 2.0.1 / 2018-01-30
 
 * parse state machines having activity with same name in two states.

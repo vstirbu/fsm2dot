@@ -43,9 +43,19 @@ describe('states', function () {
   it('should handle event without to state', function () {
     test('event-without-to');
   });
+});
 
-  it('should handle conditional transition', function () {
-    test('conditional');
+describe('conditional transition', function () {
+  it('FunctionExpression', function () {
+    test('conditional-function');
+  });
+
+  it('ArrowFunctionExpression', function () {
+    test('conditional-arrow');
+  });
+
+  it('CallExpression', function () {
+    test('conditional-call');
   });
 });
 
@@ -72,6 +82,10 @@ describe('activity handlers', function () {
 });
 
 describe('es6', function() {
+  it('with import statement', function () {
+    test('es6-import');
+  });
+
   it('with arrow functions', function () {
     test('arrow-functions');
   });
@@ -80,5 +94,17 @@ describe('es6', function() {
 describe('customization', function() {
   it('with custom callback prefix', function () {
     test('callback-prefix');
+  });
+});
+
+describe('dynamic', function () {
+  it('with dynamic initial state', function () {
+    test('initial-function');
+  });
+});
+
+describe('Miscellaneous', function () {
+  it('with JSX elements', function () {
+    test('jsx-element');
   });
 });
