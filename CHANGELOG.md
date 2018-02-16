@@ -1,5 +1,7 @@
 # HEAD
 
+# 2.1.0 / 2018-02-16
+
 * support import statement
 * support dynamic initial state
 * support JSX elements in file
