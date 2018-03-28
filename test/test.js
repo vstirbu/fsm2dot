@@ -81,6 +81,12 @@ describe('activity handlers', function () {
   });
 });
 
+describe('callbacks', function () {
+  it('with key with quotes', function () {
+    test('callback-key-with-quotes');
+  });
+});
+
 describe('es6', function() {
   it('with import statement', function () {
     test('es6-import');
