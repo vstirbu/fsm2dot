@@ -1,0 +1,1 @@
+{"events":[{"name":"quoted","from":"one","to":"two","label":"quoted"}],"callbacks":{"quoted":"quoted"},"choices":[],"states":[{"name":"one","activities":{"do":[],"entry":[],"entered":[],"exit":[]}},{"name":"two","activities":{"do":[],"entry":[],"entered":[],"exit":[]}}],"final":[]}
