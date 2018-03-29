@@ -4,9 +4,9 @@ StateMachine.callbackPrefix = '';
 
 StateMachine({
   events: [
-    { name: 'multiple', from: 'none', to: ['one', 'two'], condition: () => { return 0 } }
+    { name: 'quoted', from: 'one', to: 'two' }
   ],
   callbacks: {
-    "multiple": () => {}
+    "quoted": () => {}
   }
 });
