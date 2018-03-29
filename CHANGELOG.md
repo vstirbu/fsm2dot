@@ -1,5 +1,7 @@
 # HEAD
 
+* support for quoted keys in callbacks
+
 # 2.1.0 / 2018-02-16
 
 * support import statement
