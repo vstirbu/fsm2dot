@@ -1,5 +1,7 @@
 # HEAD
 
+# 2.2.0 / 2018-03-29
+
 * support for quoted keys in callbacks
 
 # 2.1.0 / 2018-02-16
