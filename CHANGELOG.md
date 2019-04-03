@@ -1,5 +1,7 @@
 # HEAD
 
+# 2.2.1 / 2019-04-03
+
 - support initial state as `Identifier`
 
 # 2.2.0 / 2018-03-29
