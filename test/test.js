@@ -5,13 +5,20 @@ const fs = require('fs');
 const graph = require('../lib/graph.js');
 
 function test(testcase) {
-  const input = fs.readFileSync('test/fixtures/' + testcase + '.js', { encoding: 'utf8' });
+  const input = fs.readFileSync('test/fixtures/' + testcase + '.js', {
+    encoding: 'utf8'
+  });
   // console.log(JSON.stringify(graph(input)));
-  const expected = fs.readFileSync('test/expected/json/' + testcase + '.json', { encoding: 'utf8' });
-  return assert.equal(JSON.stringify(graph(input).fsm), expected);
+  const expected = fs.readFileSync('test/expected/json/' + testcase + '.json', {
+    encoding: 'utf8'
+  });
+  return assert.equal(
+    JSON.stringify(graph(input).fsm),
+    JSON.stringify(JSON.parse(expected))
+  );
 }
 
-describe('states', function () {
+describe('states', function() {
   it('should identify the initial state', function() {
     test('initial');
   });
@@ -36,81 +43,82 @@ describe('states', function () {
     test('simple-state');
   });
 
-  it('should handle event with multiple from values', function () {
+  it('should handle event with multiple from values', function() {
     test('from-array');
   });
 
-  it('should handle event without to state', function () {
+  it('should handle event without to state', function() {
     test('event-without-to');
   });
 });
 
-describe('conditional transition', function () {
-  it('FunctionExpression', function () {
+describe('conditional transition', function() {
+  it('FunctionExpression', function() {
     test('conditional-function');
   });
 
-  it('ArrowFunctionExpression', function () {
+  it('ArrowFunctionExpression', function() {
     test('conditional-arrow');
   });
 
-  it('CallExpression', function () {
+  it('CallExpression', function() {
     test('conditional-call');
   });
 });
 
-describe('activity handlers', function () {
-  it('should identify handler name when anonymous function', function () {
+describe('activity handlers', function() {
+  it('should identify handler name when anonymous function', function() {
     test('anonymous');
   });
 
-  it('should identify handler name when function has name', function () {
+  it('should identify handler name when function has name', function() {
     test('name');
   });
 
-  it('should identify reference name', function () {
+  it('should identify reference name', function() {
     test('reference');
   });
 
-  it('should identify activities that do not have callbacks', function () {
+  it('should identify activities that do not have callbacks', function() {
     test('event-without-callbacks');
   });
 
-  it('should identify activities with same name in two states', function () {
+  it('should identify activities with same name in two states', function() {
     test('activity-in-two-states');
   });
 });
 
-describe('callbacks', function () {
-  it('with key with quotes', function () {
+describe('callbacks', function() {
+  it('with key with quotes', function() {
     test('callback-key-with-quotes');
   });
 });
 
 describe('es6', function() {
-  it('with import statement', function () {
+  it('with import statement', function() {
     test('es6-import');
   });
 
-  it('with arrow functions', function () {
+  it('with arrow functions', function() {
     test('arrow-functions');
   });
 });
 
 describe('customization', function() {
-  it('with custom callback prefix', function () {
+  it('with custom callback prefix', function() {
     test('callback-prefix');
   });
 });
 
-describe('dynamic', function () {
-  it('with dynamic initial state', function () {
+describe('dynamic', function() {
+  it('with dynamic initial state', function() {
     test('initial-function');
+    test('initial-identifier');
   });
 });
 
-describe('Miscellaneous', function () {
-  it('with JSX elements', function () {
+describe('Miscellaneous', function() {
+  it('with JSX elements', function() {
     test('jsx-element');
   });
 });
