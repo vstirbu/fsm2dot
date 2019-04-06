@@ -4,9 +4,8 @@ before_install:
 language: node_js
 
 node_js:
-  - "6"
   - "8"
-  - "9"
+  - "10"
 
 script:
   - "test -z $(npm -g -ps ls istanbul) || npm run-script test-travis"
