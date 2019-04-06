@@ -1,5 +1,9 @@
 # HEAD
 
+# 2.2.2 / 2019-04-06
+
+- fixed detection of fsm when using with `create`
+
 # 2.2.1 / 2019-04-03
 
 - support initial state as `Identifier`
