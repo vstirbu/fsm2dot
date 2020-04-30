@@ -20,7 +20,8 @@
     "estraverse": "^4.2.0",
     "lodash": "^4.17.2",
     "pug": "^2.0.0-rc.4",
-    "yargs": "^12.0.2"
+    "yargs": "^12.0.2",
+    "snyk": "^1.316.1"
   },
   "preferGlobal": true,
   "bin": {
@@ -29,6 +30,9 @@
   "scripts": {
     "test": "mocha test/test.js",
     "test-cov": "istanbul cover _mocha -- -R spec --check-leaks",
-    "test-travis": "istanbul cover _mocha --report lcovonly -- --reporter dot"
-  }
+    "test-travis": "istanbul cover _mocha --report lcovonly -- --reporter dot",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
+  },
+  "snyk": true
 }
